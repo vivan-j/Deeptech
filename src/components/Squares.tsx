@@ -33,11 +33,12 @@ const Squares: React.FC<SquaresProps> = ({
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-
+    
+    // Ensure canvas has proper dimensions
     const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width || window.innerWidth;
+      canvas.height = rect.height || window.innerHeight;
       numSquaresX.current = Math.ceil(canvas.width / squareSize) + 1;
       numSquaresY.current = Math.ceil(canvas.height / squareSize) + 1;
     };
@@ -46,7 +47,9 @@ const Squares: React.FC<SquaresProps> = ({
     resizeCanvas();
 
     const drawGrid = () => {
+      const ctx = canvas.getContext("2d");
       if (!ctx) return;
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;

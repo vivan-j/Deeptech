@@ -3,4 +3,9 @@
   height: 100%;
   border: none;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+  z-index: 1;
 }
