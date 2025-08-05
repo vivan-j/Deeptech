@@ -23,6 +23,8 @@ body {
   height: 100vh;
   z-index: -3;
   pointer-events: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 .background-particles {
@@ -606,6 +608,14 @@ body {
 .tally-embed-container {
   width: 100%;
   min-height: 400px;
+}
+
+.form-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .tally-placeholder {

@@ -261,21 +261,18 @@ function ContactPage() {
             </div>
           </div>
           <div className="contact-form">
-            <h3>💬 Send us a Message</h3>
+            <h3 className="form-title">💬 Send us a Message</h3>
             <div className="tally-embed-container">
-              {/* Replace this div with your Tally.so embed code */}
-              <div className="tally-placeholder">
-                <p>🔧 Tally.so form will be embedded here</p>
-                <p>Replace this div with your Tally embed code</p>
-                <div className="embed-instructions">
-                  <h4>To embed your Tally form:</h4>
-                  <ol>
-                    <li>Get your Tally.so embed code</li>
-                    <li>Replace this placeholder div</li>
-                    <li>The container is styled and ready!</li>
-                  </ol>
-                </div>
-              </div>
+              <iframe 
+                src="https://tally.so/embed/w26r1V?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Contact Form"
+                className="tally-iframe"
+              />
             </div>
           </div>
         </div>
